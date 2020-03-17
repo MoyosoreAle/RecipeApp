@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout2"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frag_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_anchor="@+id/coordinatorLayout2"
+        app:layout_anchorGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/botttomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botttomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:labelVisibilityMode="labeled"
+        app:layout_anchor="@+id/coordinatorLayout2"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
